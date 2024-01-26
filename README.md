@@ -15,7 +15,7 @@ npm i -D @types/node @types/express
 ```bash
 # install ts & initialize
 npm i -D typescript ts-node
-ืnpx tsc --init
+npx tsc --init
 ```
 
 ### Setup Prisma
@@ -31,5 +31,28 @@ npx prisma init --datasource-provider sqlite
 
 ```bash
 npx ts-node index.ts
+```
+
+### Watching file changes
+
+```bash
+npm i -D nodemon
+```
+
+### Project Structure
+```bash
+▁
+learn-api-node
+├── package-lock.json
+├── package.json
+├── prisma
+|  ├── dev.db
+|  ├── dev.db-journal
+|  ├── migrations
+|  └── schema.prisma
+├── README.md
+├── src
+|  └── index.ts
+└── tsconfig.json
 ```
 
