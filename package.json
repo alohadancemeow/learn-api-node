@@ -7,6 +7,9 @@
     "dev": "nodemon src/index.ts",
     "build": "tsc --project ./"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
