@@ -40,7 +40,7 @@ npm i -D nodemon
 ```
 
 ### Project Structure
-```bash
+```
 ▁
 learn-api-node
 ├── package-lock.json
