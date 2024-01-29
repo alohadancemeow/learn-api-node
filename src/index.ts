@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 // Register API routes
-app.use("/api", ProductRouter);
+app.use("/products", ProductRouter);
 
 app.listen(port, () => {
   console.log(`Listening on port:${port}`);

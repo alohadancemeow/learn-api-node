@@ -19,7 +19,13 @@ export const getProductById = async (req: Request, res: Response) => {
       },
     });
 
-    if (!product) res.status(404).json("Product not found.");
+    /**
+     * Ensure that you are not sending the response multiple times within the same request.
+     * Instead, handle errors by returning from the function or using else statements:
+     */
+    if (!product) {
+      return res.status(404).json({ error: "Product not found." });
+    }
 
     res.status(200).json({ data: product });
   } catch (error) {
@@ -52,7 +58,7 @@ export const updateProduct = async (req: Request, res: Response) => {
     });
 
     if (!existingProduct) {
-      res.status(404).json("Product not found");
+      return res.status(404).json({ error: "Product not found." });
     }
 
     const updatedProduct = await db.product.update({
@@ -79,7 +85,7 @@ export const deleteProduct = async (req: Request, res: Response) => {
     });
 
     if (!existingProduct) {
-      res.status(404).json("Product not found");
+      return res.status(404).json({ error: "Product not found." });
     }
 
     await db.product.delete({
