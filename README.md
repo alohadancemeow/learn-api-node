@@ -47,12 +47,20 @@ learn-api-node
 ├── package.json
 ├── prisma
 |  ├── dev.db
-|  ├── dev.db-journal
 |  ├── migrations
-|  └── schema.prisma
+|  |  ├── 20240126071526_init
+|  |  └── migration_lock.toml
+|  ├── schema.prisma
+|  └── seed.ts
 ├── README.md
 ├── src
-|  └── index.ts
+|  ├── controllers
+|  |  └── product.controller.ts
+|  ├── index.ts
+|  ├── lib
+|  |  └── db.ts
+|  └── routes
+|     └── product.router.ts
 └── tsconfig.json
 ```
 
